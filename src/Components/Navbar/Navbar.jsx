@@ -5,7 +5,7 @@ const Navbar = () => {
   const menus = [
     { id: "1", name: "Home", path: "/" },
     { id: "2", name: "Services", path: "/services" },
-    { id: "2", name: "About", path: "/about" },
+    { id: "3", name: "About", path: "/about" },
   ];
   return (
     <div className="absolute w-full top-0 z-10 py-2">
