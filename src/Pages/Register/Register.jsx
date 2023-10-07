@@ -1,7 +1,41 @@
 import { Link } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
+import { useContext } from "react";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
-const SignIn = () => {
+const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(name, email, password);
+    if (password.length < 6) {
+      toast.error("Password is less than 6 characters");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      toast.error("Password don't have a capital letter");
+      return;
+    }
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully Registered");
+        // updateUser(name);
+        // navigate("/");
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error(err.message);
+      });
+  };
+
   return (
     <div>
       <div className="bg-[#F0F2F5]">
@@ -17,7 +51,7 @@ const SignIn = () => {
                 Go Login!
               </Link>
             </p>
-            <form>
+            <form onSubmit={handleRegister}>
               <input
                 className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
                 type="text"
@@ -28,16 +62,14 @@ const SignIn = () => {
               <input
                 className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
                 type="email"
-                name="user-email"
-                id="user-email"
+                name="email"
                 placeholder="Email Address"
                 required
               />
               <input
                 className="w-full p-2 mb-2 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
                 type="password"
-                name="user-password"
-                id="user-password"
+                name="password"
                 placeholder="Password"
                 required
               />
@@ -56,10 +88,28 @@ const SignIn = () => {
               </button>
             </div>
           </div>
+          <div>
+            <Toaster
+              toastOptions={{
+                success: {
+                  style: {
+                    background: "green",
+                    color: "white",
+                  },
+                },
+                error: {
+                  style: {
+                    background: "red",
+                    color: "white",
+                  },
+                },
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default SignIn;
+export default Register;

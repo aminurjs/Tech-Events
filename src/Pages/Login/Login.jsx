@@ -12,7 +12,7 @@ const Login = () => {
           </h1>
           <p className="text-center text-sm text-[#44525f] mb-10">
             {"Don't"} have an account?{" "}
-            <Link className="text-[#4f77ff]" to={"/signin"}>
+            <Link className="text-[#4f77ff]" to={"/register"}>
               Sign Up Free!
             </Link>
           </p>
@@ -26,21 +26,21 @@ const Login = () => {
               required
             />
             <input
-              className="w-full p-2 mb-2 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
+              className="w-full p-2 mb-6 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
               type="password"
               name="user-password"
               id="user-password"
               placeholder="Password"
               required
             />
-            <p className="text-right mb-6">
+            {/* <p className="text-right mb-6">
               <a
                 href="#"
                 className=" text-stone-500 hover:text-[#4f77ff] text-base mb-2"
               >
                 Forgot password?
               </a>
-            </p>
+            </p> */}
             <button className="w-full mb-10 bg-gradient-to-r bg-[#4f77ff] rounded-lg p-3 text-white uppercase font-medium duration-300">
               Login
             </button>
