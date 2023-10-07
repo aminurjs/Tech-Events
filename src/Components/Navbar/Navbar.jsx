@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -28,9 +28,12 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-            <a className=" font-medium text-[#33BBCF] border border-[#33BBCF] py-2 px-4 rounded-md">
+            <Link
+              to={"/login"}
+              className=" font-medium text-[#33BBCF] border border-[#33BBCF] py-2 px-4 rounded-md"
+            >
               Login
-            </a>
+            </Link>
             <div className="dropdown">
               <label
                 tabIndex={0}
