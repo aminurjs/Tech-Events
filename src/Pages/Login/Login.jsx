@@ -1,7 +1,30 @@
 import { Link } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
+import toast, { Toaster } from "react-hot-toast";
+import { useContext } from "react";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(email, password);
+
+    login(email, password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully Logged in");
+        // updateUser(name);
+        // navigate("/");
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error("password doesn't match");
+      });
+  };
   return (
     <div className="bg-[#F0F2F5]">
       <div className="bg-[#00040F] h-[81px]"></div>
@@ -13,23 +36,21 @@ const Login = () => {
           <p className="text-center text-sm text-[#44525f] mb-10">
             {"Don't"} have an account?{" "}
             <Link className="text-[#4f77ff]" to={"/register"}>
-              Sign Up Free!
+              Register!
             </Link>
           </p>
-          <form>
+          <form onSubmit={handleLogin}>
             <input
               className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
               type="email"
-              name="user-email"
-              id="user-email"
+              name="email"
               placeholder="Email Address"
               required
             />
             <input
               className="w-full p-2 mb-6 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
               type="password"
-              name="user-password"
-              id="user-password"
+              name="password"
               placeholder="Password"
               required
             />
@@ -56,6 +77,24 @@ const Login = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div>
+        <Toaster
+          toastOptions={{
+            success: {
+              style: {
+                background: "green",
+                color: "white",
+              },
+            },
+            error: {
+              style: {
+                background: "red",
+                color: "white",
+              },
+            },
+          }}
+        />
       </div>
     </div>
   );

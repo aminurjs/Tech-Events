@@ -43,7 +43,7 @@ const Register = () => {
         <div className="max-w-xl mx-auto py-10">
           <div className="px-10 py-16 bg-white rounded-lg">
             <h1 className="text-2xl text-[#2d385e] font-semibold text-center mb-2">
-              Sign in for free!
+              Register for free!
             </h1>
             <p className="text-center text-sm text-[#44525f] mb-10">
               Already have an account?{"  "}
