@@ -8,8 +8,8 @@ const Navbar = () => {
     { id: "3", name: "About", path: "/about" },
   ];
   return (
-    <div className="absolute w-full top-0 z-10 py-2">
-      <div className="max-w-7xl mx-auto">
+    <div className="absolute w-full top-0 z-10">
+      <div className="max-w-7xl mx-auto py-2 border-b border-gray-800">
         <div className="navbar">
           <div className="flex-1 gap-12">
             <a>
@@ -32,7 +32,10 @@ const Navbar = () => {
               Login
             </a>
             <div className="dropdown">
-              <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <label
+                tabIndex={0}
+                className="btn btn-ghost text-white lg:hidden"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
