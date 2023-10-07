@@ -14,7 +14,7 @@ const Banner = () => {
               Connect with innovation. Join events that bridge the gap between
               tech enthusiasts and gamers.
             </p>
-            <button className="btn-outline font-medium text-[#33BBCF] border border-[#33BBCF] py-2 px-4 rounded-md">
+            <button className=" font-medium text-[#33BBCF] border border-[#33BBCF] py-2 px-4 rounded-md">
               Get Started
             </button>
           </div>

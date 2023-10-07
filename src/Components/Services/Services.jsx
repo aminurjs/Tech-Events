@@ -17,9 +17,12 @@ const Services = () => {
   return (
     <div className="bg-[#00040F] py-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-white text-4xl font-semibold text-center mb-10">
+        <h2 className="text-white text-4xl font-semibold text-center mb-2">
           Our Services
         </h2>
+        <p className="text-[#FFFFFFB2] text-lg text-center mb-10">
+          Exceeding Expectations Every Time
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services?.map((service) => (
             <Service key={service.id} service={service}></Service>
