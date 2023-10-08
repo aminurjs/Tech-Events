@@ -17,38 +17,39 @@ const Service = ({ service }) => {
         <h2 className="text-white text-xl font-medium">{name}</h2>
         <p className="text-[#FFFFFFB2] text-xs">Date: {time}</p>
       </div>
-      <p className="text-[#FFFFFFB2] font-semibold mb-5">
-        {description.slice(0, 100)} ...
-      </p>
-      <div className="flex justify-between">
+      <p className="text-[#FFFFFFB2] mb-5">{description.slice(0, 100)} ...</p>
+      <div className="flex justify-between items-center">
         <div>
           <p className="text-[#5ce1e6]">Ticket Price: {ticket_price}</p>
-          <div className="rating rating-xs ml-2">
-            <input
-              type="radio"
-              name="rating-5"
-              className="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-5"
-              className="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-5"
-              className="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-5"
-              className="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-5"
-              className="mask mask-star-2 bg-orange-400"
-            />
+          <div className="flex items-center">
+            <p className="text-[#FFFFFFB2]">Rating:</p>
+            <div className="rating rating-xs ml-1">
+              <input
+                type="radio"
+                name="rating-5"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-5"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-5"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-5"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-5"
+                className="mask mask-star-2 bg-orange-400"
+              />
+            </div>
           </div>
         </div>
         <button

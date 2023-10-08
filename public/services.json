@@ -7,7 +7,9 @@
     "name": "Tech Innovators Expo",
     "title": "Emerging Technologies & Their Impact on Business",
     "description": "The Tech Innovators Expo is more than just an event; it's a rendezvous for tech enthusiasts, experts, and innovators. This year, the San Francisco Convention Center will be buzzing with breakthrough discussions on AI, robotics, and the Internet of Things (IoT). Attendees will witness firsthand the incredible innovations shaping the future of businesses. Keynote speakers from leading tech firms and numerous breakout sessions ensure something for everyone.",
-    "ticket_price": "$350"
+    "ticket_price": "$350",
+    "speaker_name": "Dr. Jane Smith",
+    "tags": ["technology", "AI", "robotics"]
   },
   {
     "id": "002",
@@ -17,7 +19,9 @@
     "name": "Future of AI Conference",
     "title": "Artificial Intelligence: Tomorrow's Reality",
     "description": "Dive deep into the transformative world of AI at the Future of AI Conference. AI experts and researchers from around the globe will demystify advancements in neural networks, machine learning, and deep learning. Profound discussions on the ethical implications of AI and its societal role promise a horizon-expanding experience.",
-    "ticket_price": "$400"
+    "ticket_price": "$400",
+    "speaker_name": "Prof. David Miller",
+    "tags": ["AI", "neural networks", "ethics"]
   },
   {
     "id": "003",
@@ -27,7 +31,9 @@
     "name": "Web Dev Summit",
     "title": "The Future of Web Development: Trends and Tools",
     "description": "The Web Dev Summit in Austin is a celebration of the art and science of web development. Explore the newest design paradigms and engage in hands-on workshops on emerging web technologies. Top web developers and designers will share their craft, promising a blend of learning and networking.",
-    "ticket_price": "$300"
+    "ticket_price": "$300",
+    "speaker_name": "Ms. Linda Garcia",
+    "tags": ["web development", "design", "workshops"]
   },
   {
     "id": "004",
@@ -37,17 +43,21 @@
     "name": "GameFest LA",
     "title": "The Heartbeat of Gaming: Experience, Play, Innovate",
     "description": "GameFest LA is the most anticipated gaming convention of the year. Dive into the world of gaming with demos of the latest titles, indie game showcases, and VR experiences. Engage in riveting discussions on game design and storytelling with industry legends. GameFest LA promises to offer insights, experiences, and networking opportunities unparalleled in the gaming world.",
-    "ticket_price": "$375"
+    "ticket_price": "$375",
+    "speaker_name": "Mr. Alex Thornton",
+    "tags": ["gaming", "VR", "indie games"]
   },
   {
     "id": "005",
     "place": "Cologne Trade Fair, Cologne, Germany",
     "time": "2024-08-16 09:30:00",
-    "image": "https://i.ibb.co/pJPGHG2/gamers-make.jpg",
+    "image": "https://i.ibb.co/gVRFTSV/convention.jpg",
     "name": "Global Gamers Expo",
     "title": "Uniting the World Through Gaming",
     "description": "The Global Gamers Expo in Cologne is a celebration of a global community brought together by a shared love for gaming. Experience a diverse gaming culture, from eSports tournaments to the serene beauty of art in games. Engage in workshops and sessions that dive deep into the worlds of game development and sound design. The Global Gamers Expo promises an immersive gaming experience.",
-    "ticket_price": "$420"
+    "ticket_price": "$420",
+    "speaker_name": "Ms. Claudia Weber",
+    "tags": ["gaming", "eSports", "development"]
   },
   {
     "id": "006",
@@ -57,6 +67,8 @@
     "name": "HackFusion 2024",
     "title": "Coding the Future: 48-Hour Innovation Challenge",
     "description": "Step into HackFusion 2024, where coding meets innovation in a 48-hour marathon. Tackle real-world challenges with tech solutions in a setting that encourages collaboration, reimagining, and boundary-pushing. Challenges span diverse domains ensuring there's something for every tech enthusiast. With prizes, mentorship opportunities, and the chance to showcase your prototype to industry leaders, HackFusion 2024 is a launchpad for the next big tech idea.",
-    "ticket_price": "$50"
+    "ticket_price": "$50",
+    "speaker_name": "Mr. Rahul Verma",
+    "tags": ["hackathon", "coding", "innovation"]
   }
 ]

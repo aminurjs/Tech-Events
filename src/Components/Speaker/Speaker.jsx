@@ -5,9 +5,9 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const Speaker = () => {
   return (
     <div className="bg-[url(https://i.ibb.co/s593kHd/the-audience.jpg)] bg-cover">
-      <div className="bg-[#00040F] bg-opacity-80 py-20">
-        <div className="max-w-7xl mx-auto flex gap-10">
-          <div className="w-1/2">
+      <div className="bg-[#00040F] bg-opacity-80 py-20 px-5 lg:px-0">
+        <div className="max-w-7xl mx-auto flex gap-10 px-5 lg:px-0 flex-col lg:flex-row">
+          <div className="lg:w-1/2">
             <h3 className="text-[#5CE1E6] mb-4">The Event</h3>
             <h2 className="text-3xl text-white font-semibold mb-4">
               Our Professionals Speaker
@@ -42,7 +42,7 @@ const Speaker = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <div className="flex gap-5">
               <img
                 className="w-1/2"

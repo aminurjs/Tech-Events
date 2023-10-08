@@ -5,19 +5,19 @@ import "./About.css";
 const About = () => {
   return (
     <div className="bg-[#00040F] py-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-5 lg:px-0">
         <div>
           <h3 className="text-[#5CE1E6] text-lg text-center mb-4">
             TechEvent Management
           </h3>
-          <h2 className="text-4xl text-white font-semibold text-center mb-4">
+          <h2 className="text-3xl md:text-4xl text-white font-semibold text-center mb-4">
             Talking All About Our Events
           </h2>
           <p className="text-[#FFFFFFB2] text-center mb-16">
             Empowering Digital Gatherings. Orchestrating Tech Excellence.
           </p>
-          <div className="flex gap-12 px-20">
-            <div className="bg-[url(https://i.ibb.co/s593kHd/the-audience.jpg)] bg-cover rounded-md w-5/12">
+          <div className="flex gap-12 lg:px-20 flex-col lg:flex-row">
+            <div className="bg-[url(https://i.ibb.co/s593kHd/the-audience.jpg)] bg-cover rounded-md mx-auto lg:mx-0 lg:w-5/12">
               <div className="min-h-[450px] rounded-md flex flex-col justify-between bg-black bg-opacity-50 p-5">
                 <div className="text-[#FFFFFFB2] text-5xl">
                   <BsGraphUpArrow></BsGraphUpArrow>
@@ -32,9 +32,9 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="w-7/12 mt-6">
+            <div className="w-full lg:w-7/12 mt-6">
               <h3 className="text-[#5CE1E6] mb-4">About the TechEvent</h3>{" "}
-              <h2 className="text-3xl text-white font-semibold mb-4">
+              <h2 className="text-2xl md:text-3xl text-white font-semibold mb-4">
                 Learn The Advanced Strategy Of Growing The Tech Industry
               </h2>
               <p className="text-[#FFFFFFB2] mb-8">
@@ -44,7 +44,7 @@ const About = () => {
                 the momentum of innovation and drive the tech {"industry's"}{" "}
                 next evolutionary leap.
               </p>
-              <div className="flex gap-2 justify-between items-center mb-5">
+              <div className="flex gap-6 md:gap-2 justify-between items-center mb-5 flex-col md:flex-row">
                 <div className="flex gap-4 items-center">
                   <div className="text-[#5CE1E6] text-4xl">
                     <BsGraphUpArrow></BsGraphUpArrow>

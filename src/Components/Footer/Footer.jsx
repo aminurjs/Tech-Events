@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <footer className="bg-[#0B0A0C] pt-20">
       <div className="max-w-7xl mx-auto">
-        <div className=" grid grid-cols-5 gap-6 border-b pb-6 border-gray-800">
-          <div className="col-span-2">
+        <div className="px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 border-b pb-6 border-gray-800">
+          <div className="md:col-span-2">
             <Link to={"/"}>
               <img src="https://i.ibb.co/w4B90KD/Group-481775.png" alt="" />
             </Link>
@@ -50,11 +50,11 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="py-6 flex justify-between">
+        <div className="py-6 flex justify-between text-center md:text-left px-5 lg:px-0">
           <p className="text-[#FFFFFFB2]">
             Copyright © 2023 TechEvent. All Rights Reserved.
           </p>
-          <div className="text-[#FFFFFFB2] text-2xl flex gap-4">
+          <div className="text-[#FFFFFFB2] text-2xl hidden md:flex gap-4">
             <Link>
               <AiOutlineInstagram></AiOutlineInstagram>
             </Link>

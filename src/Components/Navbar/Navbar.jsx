@@ -9,7 +9,7 @@ const Navbar = () => {
   ];
   return (
     <div className="absolute w-full top-0 z-10">
-      <div className="max-w-7xl mx-auto py-2 border-b border-gray-800">
+      <div className="max-w-7xl mx-auto py-2 px-5 lg:px-0 border-b border-gray-800">
         <div className="navbar">
           <div className="flex-1 gap-12">
             <a>
@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
             <Link
               to={"/login"}
-              className=" font-medium text-[#33BBCF] border border-[#33BBCF] py-2 px-4 rounded-md"
+              className=" font-medium text-[#33BBCF] border border-[#33BBCF] py-1.5 px-3 md:py-2 md:px-4 rounded-md"
             >
               Login
             </Link>
