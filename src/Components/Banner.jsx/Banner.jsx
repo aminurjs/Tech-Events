@@ -19,7 +19,7 @@ const Banner = () => {
             </button>
           </div>
           <img
-            className="w-4/5 mx-auto lg:w-2/5 img"
+            className="md:w-4/5 mx-auto lg:w-2/5 img"
             src="https://i.ibb.co/QDQGf3V/pngwing-com-6.png"
             alt=""
           />

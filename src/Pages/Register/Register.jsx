@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, googleLogin } = useContext(AuthContext);
+  const [passError, setPassError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -14,12 +17,12 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(name, email, password);
-    if (password.length < 6) {
-      toast.error("Password is less than 6 characters");
-      return;
-    }
-    if (!/[A-Z]/.test(password)) {
-      toast.error("Password don't have a capital letter");
+    setPassError("");
+
+    if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/.test(password)) {
+      setPassError(
+        "Password must be 6 characters including one uppercase letter, and one special character!"
+      );
       return;
     }
 
@@ -36,10 +39,23 @@ const Register = () => {
       });
   };
 
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully Registered");
+        // navigate("/");
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error(err.message);
+      });
+  };
+
   return (
     <div>
       <div className="bg-[#F0F2F5]">
-        <div className="bg-[#00040F] h-[81px]"></div>
+        <div className="bg-[#00040F] h-[85px]"></div>
         <div className="max-w-xl mx-auto py-10">
           <div className="px-10 py-16 bg-white rounded-lg">
             <h1 className="text-2xl text-[#2d385e] font-semibold text-center mb-2">
@@ -66,13 +82,22 @@ const Register = () => {
                 placeholder="Email Address"
                 required
               />
-              <input
-                className="w-full p-2 mb-2 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
-                type="password"
-                name="password"
-                placeholder="Password"
-                required
-              />
+              <div className="relative">
+                <input
+                  className="w-full p-2 mb-2 outline-none text-slate-900 text-base border-b-2 border-stone-300 focus:border-stone-700"
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+                <span
+                  className="text-lg absolute top-2 right-4"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                </span>
+              </div>
+              {passError && <p className="text-sm text-red-500">{passError}</p>}
               <button className="w-full mt-6 mb-10 bg-gradient-to-r bg-[#4f77ff] rounded-lg p-3 text-white uppercase font-medium duration-300">
                 Sign in with email
               </button>
@@ -82,7 +107,10 @@ const Register = () => {
             </p>
             <div className="w-full h-[1px] bg-stone-500"></div>
             <div className="text-center mt-8">
-              <button className="block w-full p-2 border-2 border-stone-500 font-medium rounded-lg mb-5">
+              <button
+                onClick={handleGoogleLogin}
+                className="block w-full p-2 border-2 border-stone-500 font-medium rounded-lg mb-5"
+              >
                 <AiOutlineGoogle className="inline text-2xl mr-2"></AiOutlineGoogle>
                 Continue with Google
               </button>

@@ -1,7 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { logOut, user } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        console.log(error);
+        // An error happened.
+      });
+  };
   const menus = [
     { id: "1", name: "Home", path: "/" },
     { id: "2", name: "Services", path: "/services" },
@@ -28,12 +41,6 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-            <Link
-              to={"/login"}
-              className=" font-medium text-[#33BBCF] border border-[#33BBCF] py-1.5 px-3 md:py-2 md:px-4 rounded-md"
-            >
-              Login
-            </Link>
             <div className="dropdown">
               <label
                 tabIndex={0}
@@ -56,7 +63,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 right-0"
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 -right-10"
               >
                 {menus.map((menu) => (
                   <li key={menu.id}>
@@ -64,7 +71,51 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div>{" "}
+            {user ? (
+              <div className="dropdown dropdown-end">
+                <label tabIndex={1} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full bg-white">
+                    <img
+                      src={
+                        user?.photoURL
+                          ? user.photoURL
+                          : "https://i.ibb.co/wYyhNfG/icons8-male-user-100.png"
+                      }
+                    />
+                  </div>
+                </label>
+                <div
+                  tabIndex={1}
+                  className="mt-3 z-[1] shadow menu menu-sm dropdown-content bg-base-100 rounded-box p-5 min-w-[220px]"
+                >
+                  <label className="avatar text-center mx-auto">
+                    <div className="w-16 rounded-full bg-white ">
+                      <img
+                        src={
+                          user?.photoURL
+                            ? user.photoURL
+                            : "https://i.ibb.co/wYyhNfG/icons8-male-user-100.png"
+                        }
+                      />
+                    </div>
+                  </label>
+                  <h2 className="mt-2 mb-4 text-black font-medium text-center">
+                    Name: {user?.displayName}
+                  </h2>
+                  <button onClick={handleLogOut} className="btn btn-sm">
+                    Log Out
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <Link
+                to={"/login"}
+                className=" font-medium text-[#33BBCF] border border-[#33BBCF] py-1.5 px-3 md:py-2 md:px-4 rounded-md"
+              >
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </div>

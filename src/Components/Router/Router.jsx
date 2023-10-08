@@ -4,6 +4,7 @@ import Home from "../../Pages/Home/Home";
 import Details from "../../Pages/Details/Details";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
+import PrivateRoutes from "../Private/PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element: (
+          <PrivateRoutes>
+            <Details></Details>
+          </PrivateRoutes>
+        ),
         loader: () => fetch("../services.json"),
       },
       {

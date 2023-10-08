@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
 import toast, { Toaster } from "react-hot-toast";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { login } = useContext(AuthContext);
+  const { login, googleLogin } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -22,12 +25,24 @@ const Login = () => {
       })
       .catch((err) => {
         console.error(err);
-        toast.error("password doesn't match");
+        toast.error("Invalid Password");
+      });
+  };
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully Logged in");
+        // navigate("/");
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error(err.message);
       });
   };
   return (
     <div className="bg-[#F0F2F5]">
-      <div className="bg-[#00040F] h-[81px]"></div>
+      <div className="bg-[#00040F] h-[85px]"></div>
       <div className="max-w-xl mx-auto py-10">
         <div className="px-10 py-16 bg-white rounded-lg">
           <h1 className="text-2xl text-[#2d385e] font-semibold text-center mb-2">
@@ -47,13 +62,21 @@ const Login = () => {
               placeholder="Email Address"
               required
             />
-            <input
-              className="w-full p-2 mb-6 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
+            <div className="relative">
+              <input
+                className="w-full p-2 mb-2 outline-none text-slate-900 text-base border-b-2 border-stone-300 focus:border-stone-700"
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <span
+                className="text-lg absolute top-2 right-4"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+              </span>
+            </div>
             {/* <p className="text-right mb-6">
               <a
                 href="#"
@@ -62,7 +85,7 @@ const Login = () => {
                 Forgot password?
               </a>
             </p> */}
-            <button className="w-full mb-10 bg-gradient-to-r bg-[#4f77ff] rounded-lg p-3 text-white uppercase font-medium duration-300">
+            <button className="w-full mt-6 mb-10 bg-gradient-to-r bg-[#4f77ff] rounded-lg p-3 text-white uppercase font-medium duration-300">
               Login
             </button>
           </form>
@@ -71,7 +94,10 @@ const Login = () => {
           </p>
           <div className="w-full h-[1px] bg-stone-500"></div>
           <div className="text-center mt-8">
-            <button className="block w-full p-2 border-2 border-stone-500 font-medium rounded-lg mb-5">
+            <button
+              onClick={handleGoogleLogin}
+              className="block w-full p-2 border-2 border-stone-500 font-medium rounded-lg mb-5"
+            >
               <AiOutlineGoogle className="inline text-2xl mr-2"></AiOutlineGoogle>
               Continue with Google
             </button>

@@ -70,5 +70,77 @@
     "ticket_price": "$50",
     "speaker_name": "Mr. Rahul Verma",
     "tags": ["hackathon", "coding", "innovation"]
+  },
+  {
+    "id": "007",
+    "name": "VR & AR Experiences",
+    "title": "Virtual Realities: Beyond the Screen",
+    "image": "https://i.ibb.co/5Tfcgm3/vr-ar.jpg",
+    "place": "Tech Hall, San Francisco, CA",
+    "ticket_price": "$120",
+    "speaker_name": "Dr. James Collins",
+    "time": "2023-11-15 09:00:00",
+    "tags": ["VR", "AR", "innovation"],
+    "description": "In the realm of Virtual Reality (VR) and Augmented Reality (AR), the boundaries of imagination and technology are constantly expanding. As we stand on the cusp of a new era of digital interaction, this category showcases the best of these technologies. From virtual reality headsets that transport you to faraway lands to augmented reality apps that bring the digital world into our physical space, the advancements are astonishing. Attending these events, attendees will get the chance to interact with virtual entities, engage in simulations that feel incredibly real, and understand the technology behind these marvels. Developers and enthusiasts can connect over the latest trends, tools, and techniques, sharing knowledge and collaborating on future projects. Moreover, with major tech giants investing billions into R&D in these areas, the potential for innovation and growth is massive. The events under this category are a perfect blend of learning, exploration, and fun, ensuring every attendee leaves with memorable experiences and newfound knowledge."
+  },
+  {
+    "id": "008",
+    "name": "eSport Tournaments",
+    "title": "Battles of the Best: eSport Arena",
+    "image": "https://i.ibb.co/RB8gWc2/esport.jpg",
+    "place": "Esport Arena, New York, NY",
+    "ticket_price": "$60",
+    "speaker_name": "Ms. Rachel Green",
+    "time": "2023-11-15 09:00:00",
+    "tags": ["gaming", "tournament", "competitive"],
+    "description": "The eSport industry has skyrocketed in popularity and value over the past decade. What started as small local competitions in internet cafes has transformed into mega-events filling stadiums with thousands of fervent fans. These tournaments bring together the best gamers from around the world, competing in a variety of titles, from real-time strategy games to immersive multiplayer battles. Beyond the games, these tournaments are a celebration of gaming culture, with cosplayers, fan art, and community events. Attendees can expect high levels of adrenaline and excitement, with each match filled with unpredictable moments and awe-inspiring skill. Panel discussions provide insights into strategies, while meet-and-greet sessions allow fans to connect with their gaming idols. Merchandise stalls, game trial booths, and food counters ensure there's never a dull moment. A blend of entertainment, competition, and community, these eSport events are a testament to the thriving global gaming community."
+  },
+  {
+    "id": "009",
+    "name": "Tech Product Launches",
+    "title": "Tomorrow's Tech Today",
+    "image": "https://i.ibb.co/xDK71p8/techpro.jpg",
+    "place": "Innovate Hall, Los Angeles, CA",
+    "ticket_price": "$90",
+    "speaker_name": "Mr. Alan Turing",
+    "time": "2023-11-15 09:00:00",
+    "tags": ["tech", "innovation", "products"],
+    "description": "Tech Product Launches are the focal points of the industry, moments where innovations are showcased and the future is previewed. These events stand at the intersection of anticipation and realization. From smartphones that fold to AI systems that seem to think, every launch tells a story of countless hours of research, development, testing, and refinement. Attending these launches means getting an intimate look at where the tech world is headed next. Beyond just product reveals, they're a comprehensive look at the industry's trajectory, offering deep dives into the tech, discussions with creators, engineers, and marketers, and hands-on experiences for attendees. They're also networking goldmines, where business leaders, tech enthusiasts, journalists, and influencers come together, forging connections, striking deals, and sparking collaborations. In essence, these launches aren't just about products; they're about the people, processes, and passions behind them."
+  },
+  {
+    "id": "010",
+    "name": "Developer Conferences",
+    "title": "Code & Create: Developer's Haven",
+    "image": "https://i.ibb.co/1s6C4gx/confer.jpg",
+    "place": "Code Arena, Chicago, IL",
+    "ticket_price": "$150",
+    "speaker_name": "Ms. Ada Lovelace",
+    "time": "2023-11-15 09:00:00",
+    "tags": ["code", "development", "software"],
+    "description": "Developer Conferences are more than just gatherings; they're incubators for innovation. They're where the abstract concepts of coding and software development turn tangible, where ideas transform into actionable projects. Here, developers can attend workshops led by pioneers in the industry, uncovering the nuances of cutting-edge technologies. Panel discussions delve into the intricacies of software development, from emerging programming languages to best practices in software architecture. Beyond the sessions, the real magic happens in the corridors, over coffee breaks, and during late-night hackathons, where developers collaborate, brainstorm, and birth new ideas. These conferences are also platforms where leading tech companies unveil new developer tools, SDKs, and APIs, enabling creators to push the boundaries of what's possible. In a rapidly evolving tech landscape, staying updated is crucial, and these events ensure developers are always at the forefront of change."
+  },
+  {
+    "id": "011",
+    "name": "Gaming Conventions",
+    "title": "Gamer's Paradise: Play & Preview",
+    "image": "https://i.ibb.co/gVRFTSV/convention.jpg",
+    "place": "Gamer's Land, Orlando, FL",
+    "ticket_price": "$80",
+    "speaker_name": "Mr. John Gamester",
+    "time": "2023-11-15 09:00:00",
+    "tags": ["gaming", "convention", "play"],
+    "description": "Gaming Conventions are a celebration, a tribute to the vibrant world of digital entertainment. These events are where pixels come to life. Attendees are treated to a spectacle of colors, sounds, and experiences. They can try their hands at yet-to-be-released games, providing invaluable feedback to developers. Iconic characters from beloved franchises come alive through cosplay, and merchandise stalls allow fans to take home a piece of the action. Panel discussions offer deep dives into game design, storytelling, and the future of the industry. For many, the highlight is interacting with game developers, understanding the intricacies of creating compelling narratives and immersive worlds. With esports zones, virtual reality sections, and indie developer stalls, these conventions cater to every facet of gaming, from the casual mobile gamer to the hardcore PC enthusiast. They're not just events; they're experiences, transporting attendees into realms of wonder and excitement."
+  },
+  {
+    "id": "012",
+    "name": "Innovative Tech Workshops",
+    "title": "Hands-on with the Future",
+    "image": "https://i.ibb.co/XWYHGDJ/innovation.jpg",
+    "place": "Innovation Center, Seattle, WA",
+    "ticket_price": "$110",
+    "speaker_name": "Mr. Brian White",
+    "time": "2023-11-15 09:00:00",
+    "tags": ["workshop", "technology", "hands-on"],
+    "description": "Innovative Tech Workshops are the crucibles where knowledge meets application. Designed for those who love to roll up their sleeves and dive deep, these workshops are all about hands-on learning. Each session is meticulously crafted to ensure attendees don't just learn about technology but understand how to leverage it effectively. Be it setting up neural networks, programming robots, or understanding the intricacies of quantum computing, experts guide attendees every step of the way. The workshop environment fosters collaboration and creativity. Small groups tackle real-world problems, brainstorm solutions, and implement them, all under the watchful eyes of seasoned professionals. These sessions are also excellent networking platforms, allowing attendees to connect with peers, share ideas, and even kickstart collaborations. In a world driven by technology, these workshops ensure participants remain at the cutting edge, armed with the skills and knowledge to shape the future."
   }
 ]
