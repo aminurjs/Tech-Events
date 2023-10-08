@@ -25,9 +25,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto py-2 px-5 lg:px-0 border-b border-gray-800">
         <div className="navbar">
           <div className="flex-1 gap-12">
-            <a>
+            <Link to={"/"}>
               <img src="https://i.ibb.co/w4B90KD/Group-481775.png" alt="" />
-            </a>
+            </Link>
           </div>
           <div className="flex-none gap-6">
             <div className=" hidden lg:flex">

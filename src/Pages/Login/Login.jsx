@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
 import toast, { Toaster } from "react-hot-toast";
 import { useContext, useState } from "react";
@@ -8,20 +8,21 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Login = () => {
   const { login, googleLogin } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
-    console.log(email, password);
 
     login(email, password)
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Logged in");
         // updateUser(name);
-        // navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.error(err);
