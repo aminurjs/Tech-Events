@@ -1,56 +1,62 @@
 [
   {
-    "id": "CAT001",
-    "name": "VR & AR Experiences",
-    "title": "Virtual Realities: Beyond the Screen",
-    "image": "https://i.ibb.co/5Tfcgm3/vr-ar.jpg",
-    "price": "$120",
-    "shortDescription": "Experience unparalleled immersion in the worlds of VR & AR. Engage with life-like simulations, augmented environments, and leading-edge interactive platforms.",
-    "fullDescription": "In the realm of Virtual Reality (VR) and Augmented Reality (AR), the boundaries of imagination and technology are constantly expanding. As we stand on the cusp of a new era of digital interaction, this category showcases the best of these technologies. From virtual reality headsets that transport you to faraway lands to augmented reality apps that bring the digital world into our physical space, the advancements are astonishing. Attending these events, attendees will get the chance to interact with virtual entities, engage in simulations that feel incredibly real, and understand the technology behind these marvels. Developers and enthusiasts can connect over the latest trends, tools, and techniques, sharing knowledge and collaborating on future projects. Moreover, with major tech giants investing billions into R&D in these areas, the potential for innovation and growth is massive. The events under this category are a perfect blend of learning, exploration, and fun, ensuring every attendee leaves with memorable experiences and newfound knowledge."
+    "id": "001",
+    "place": "San Francisco Convention Center, San Francisco, CA",
+    "time": "2023-11-15 09:00:00",
+    "image": "https://i.ibb.co/JcsC359/innovetor.jpg",
+    "name": "Tech Innovators Expo",
+    "title": "Emerging Technologies & Their Impact on Business",
+    "description": "The Tech Innovators Expo is more than just an event; it's a rendezvous for tech enthusiasts, experts, and innovators. This year, the San Francisco Convention Center will be buzzing with breakthrough discussions on AI, robotics, and the Internet of Things (IoT). Attendees will witness firsthand the incredible innovations shaping the future of businesses. Keynote speakers from leading tech firms and numerous breakout sessions ensure something for everyone.",
+    "ticket_price": "$350"
   },
   {
-    "id": "CAT002",
-    "name": "eSport Tournaments",
-    "title": "Battles of the Best: eSport Arena",
-    "image": "https://i.ibb.co/RB8gWc2/esport.jpg",
-    "price": "$60",
-    "shortDescription": "Delve into the high-energy world of eSport. Witness intense competitions, celebrate outstanding plays, and cheer for your favorite gaming legends.",
-    "fullDescription": "The eSport industry has skyrocketed in popularity and value over the past decade. What started as small local competitions in internet cafes has transformed into mega-events filling stadiums with thousands of fervent fans. These tournaments bring together the best gamers from around the world, competing in a variety of titles, from real-time strategy games to immersive multiplayer battles. Beyond the games, these tournaments are a celebration of gaming culture, with cosplayers, fan art, and community events. Attendees can expect high levels of adrenaline and excitement, with each match filled with unpredictable moments and awe-inspiring skill. Panel discussions provide insights into strategies, while meet-and-greet sessions allow fans to connect with their gaming idols. Merchandise stalls, game trial booths, and food counters ensure there's never a dull moment. A blend of entertainment, competition, and community, these eSport events are a testament to the thriving global gaming community."
+    "id": "002",
+    "place": "Boston Expo Center, Boston, MA",
+    "time": "2023-12-07 10:00:00",
+    "image": "https://i.ibb.co/B6j8hyh/ai.jpg",
+    "name": "Future of AI Conference",
+    "title": "Artificial Intelligence: Tomorrow's Reality",
+    "description": "Dive deep into the transformative world of AI at the Future of AI Conference. AI experts and researchers from around the globe will demystify advancements in neural networks, machine learning, and deep learning. Profound discussions on the ethical implications of AI and its societal role promise a horizon-expanding experience.",
+    "ticket_price": "$400"
   },
   {
-    "id": "CAT003",
-    "name": "Tech Product Launches",
-    "title": "Tomorrow's Tech Today",
-    "image": "https://i.ibb.co/xDK71p8/techpro.jpg",
-    "price": "$90",
-    "shortDescription": "Dive into a realm where revolutionary gadgets meet transformative software. Experience the future of tech before the world does.",
-    "fullDescription": "Tech Product Launches are the focal points of the industry, moments where innovations are showcased and the future is previewed. These events stand at the intersection of anticipation and realization. From smartphones that fold to AI systems that seem to think, every launch tells a story of countless hours of research, development, testing, and refinement. Attending these launches means getting an intimate look at where the tech world is headed next. Beyond just product reveals, they're a comprehensive look at the industry's trajectory, offering deep dives into the tech, discussions with creators, engineers, and marketers, and hands-on experiences for attendees. They're also networking goldmines, where business leaders, tech enthusiasts, journalists, and influencers come together, forging connections, striking deals, and sparking collaborations. In essence, these launches aren't just about products; they're about the people, processes, and passions behind them."
+    "id": "003",
+    "place": "Austin Tech Arena, Austin, TX",
+    "time": "2024-01-20 08:30:00",
+    "image": "https://i.ibb.co/0jQwZmp/developer.jpg",
+    "name": "Web Dev Summit",
+    "title": "The Future of Web Development: Trends and Tools",
+    "description": "The Web Dev Summit in Austin is a celebration of the art and science of web development. Explore the newest design paradigms and engage in hands-on workshops on emerging web technologies. Top web developers and designers will share their craft, promising a blend of learning and networking.",
+    "ticket_price": "$300"
   },
   {
-    "id": "CAT004",
-    "name": "Developer Conferences",
-    "title": "Code & Create: Developer's Haven",
-    "image": "https://i.ibb.co/1s6C4gx/confer.jpg",
-    "price": "$150",
-    "shortDescription": "Mingle with the brightest minds in technology. Explore coding paradigms, latest tools, and transformative development techniques.",
-    "fullDescription": "Developer Conferences are more than just gatherings; they're incubators for innovation. They're where the abstract concepts of coding and software development turn tangible, where ideas transform into actionable projects. Here, developers can attend workshops led by pioneers in the industry, uncovering the nuances of cutting-edge technologies. Panel discussions delve into the intricacies of software development, from emerging programming languages to best practices in software architecture. Beyond the sessions, the real magic happens in the corridors, over coffee breaks, and during late-night hackathons, where developers collaborate, brainstorm, and birth new ideas. These conferences are also platforms where leading tech companies unveil new developer tools, SDKs, and APIs, enabling creators to push the boundaries of what's possible. In a rapidly evolving tech landscape, staying updated is crucial, and these events ensure developers are always at the forefront of change."
+    "id": "004",
+    "place": "Los Angeles Convention Center, Los Angeles, CA",
+    "time": "2024-02-25 10:00:00",
+    "image": "https://i.ibb.co/89vsx3f/gaming.jpg",
+    "name": "GameFest LA",
+    "title": "The Heartbeat of Gaming: Experience, Play, Innovate",
+    "description": "GameFest LA is the most anticipated gaming convention of the year. Dive into the world of gaming with demos of the latest titles, indie game showcases, and VR experiences. Engage in riveting discussions on game design and storytelling with industry legends. GameFest LA promises to offer insights, experiences, and networking opportunities unparalleled in the gaming world.",
+    "ticket_price": "$375"
   },
   {
-    "id": "CAT005",
-    "name": "Gaming Conventions",
-    "title": "Gamer's Paradise: Play & Preview",
-    "image": "https://i.ibb.co/gVRFTSV/convention.jpg",
-    "price": "$80",
-    "shortDescription": "Embark on a journey into the heart of gaming. Interact with developers, try unreleased titles, and revel in gaming culture.",
-    "fullDescription": "Gaming Conventions are a celebration, a tribute to the vibrant world of digital entertainment. These events are where pixels come to life. Attendees are treated to a spectacle of colors, sounds, and experiences. They can try their hands at yet-to-be-released games, providing invaluable feedback to developers. Iconic characters from beloved franchises come alive through cosplay, and merchandise stalls allow fans to take home a piece of the action. Panel discussions offer deep dives into game design, storytelling, and the future of the industry. For many, the highlight is interacting with game developers, understanding the intricacies of creating compelling narratives and immersive worlds. With esports zones, virtual reality sections, and indie developer stalls, these conventions cater to every facet of gaming, from the casual mobile gamer to the hardcore PC enthusiast. They're not just events; they're experiences, transporting attendees into realms of wonder and excitement."
+    "id": "005",
+    "place": "Cologne Trade Fair, Cologne, Germany",
+    "time": "2024-08-16 09:30:00",
+    "image": "https://i.ibb.co/pJPGHG2/gamers-make.jpg",
+    "name": "Global Gamers Expo",
+    "title": "Uniting the World Through Gaming",
+    "description": "The Global Gamers Expo in Cologne is a celebration of a global community brought together by a shared love for gaming. Experience a diverse gaming culture, from eSports tournaments to the serene beauty of art in games. Engage in workshops and sessions that dive deep into the worlds of game development and sound design. The Global Gamers Expo promises an immersive gaming experience.",
+    "ticket_price": "$420"
   },
   {
-    "id": "CAT006",
-    "name": "Innovative Tech Workshops",
-    "title": "Hands-on with the Future",
-    "image": "https://i.ibb.co/XWYHGDJ/innovation.jpg",
-    "price": "$110",
-    "shortDescription": "Elevate your tech prowess. Engage with hands-on sessions ranging from AI programming to robotics, guided by industry luminaries.",
-    "fullDescription": "Innovative Tech Workshops are the crucibles where knowledge meets application. Designed for those who love to roll up their sleeves and dive deep, these workshops are all about hands-on learning. Each session is meticulously crafted to ensure attendees don't just learn about technology but understand how to leverage it effectively. Be it setting up neural networks, programming robots, or understanding the intricacies of quantum computing, experts guide attendees every step of the way. The workshop environment fosters collaboration and creativity. Small groups tackle real-world problems, brainstorm solutions, and implement them, all under the watchful eyes of seasoned professionals. These sessions are also excellent networking platforms, allowing attendees to connect with peers, share ideas, and even kickstart collaborations. In a world driven by technology, these workshops ensure participants remain at the cutting edge, armed with the skills and knowledge to shape the future."
+    "id": "006",
+    "place": "Silicon Valley Tech Hub, San Jose, CA",
+    "time": "2024-04-10 08:00:00",
+    "image": "https://i.ibb.co/8BZq6hy/hackfusion.jpg",
+    "name": "HackFusion 2024",
+    "title": "Coding the Future: 48-Hour Innovation Challenge",
+    "description": "Step into HackFusion 2024, where coding meets innovation in a 48-hour marathon. Tackle real-world challenges with tech solutions in a setting that encourages collaboration, reimagining, and boundary-pushing. Challenges span diverse domains ensuring there's something for every tech enthusiast. With prizes, mentorship opportunities, and the chance to showcase your prototype to industry leaders, HackFusion 2024 is a launchpad for the next big tech idea.",
+    "ticket_price": "$50"
   }
 ]
