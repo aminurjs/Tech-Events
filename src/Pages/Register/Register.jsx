@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
@@ -6,9 +6,10 @@ import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, googleLogin } = useContext(AuthContext);
+  const { createUser, googleLogin, updateUser } = useContext(AuthContext);
   const [passError, setPassError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -30,8 +31,8 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Registered");
-        // updateUser(name);
-        // navigate("/");
+        updateUser(name);
+        navigate("/");
       })
       .catch((err) => {
         console.error(err);
