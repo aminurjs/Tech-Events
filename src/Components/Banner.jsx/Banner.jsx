@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
-    <div>
-      <div className="bg-[#00040F]">
+    <div className="bg-[url(https://i.ibb.co/s593kHd/the-audience.jpg)] bg-center bg-cover">
+      <div className="bg-[#00040F] bg-opacity-90">
         <div className="max-w-7xl mx-auto pt-48 pb-16 flex gap-6 border-b border-gray-800 flex-col-reverse lg:flex-row px-5 lg:px-0">
           <div className="lg:ml-10 lg:w-3/5">
             <h3 className="text-white text-lg font-medium mb-5">

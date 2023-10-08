@@ -70,20 +70,20 @@ const Register = () => {
             </p>
             <form onSubmit={handleRegister}>
               <input
-                className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
+                className="px-5 py-2 outline-none border border-gray-200 rounded-md w-full mb-4"
                 type="text"
                 name="name"
                 placeholder="Full Name"
                 required
               />
               <input
-                className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
+                className="px-5 py-2 outline-none border border-gray-200 rounded-md w-full mb-4"
                 type="text"
                 name="image"
                 placeholder="Image URL (Optional)"
               />
               <input
-                className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
+                className="px-5 py-2 outline-none border border-gray-200 rounded-md w-full mb-4"
                 type="email"
                 name="email"
                 placeholder="Email Address"
@@ -91,14 +91,14 @@ const Register = () => {
               />
               <div className="relative">
                 <input
-                  className="w-full p-2 mb-2 outline-none text-slate-900 text-base border-b-2 border-stone-300 focus:border-stone-700"
+                  className="px-5 py-2 outline-none border border-gray-200 rounded-md w-full mb-2"
                   type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="Password"
                   required
                 />
                 <span
-                  className="text-lg absolute top-2 right-4"
+                  className="text-lg absolute top-3 right-4 text-stone-600"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}

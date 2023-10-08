@@ -105,7 +105,7 @@ const Details = () => {
               </span>
               <p>Ticket Price : {ticket_price}</p>
             </div>
-            <button className="mb-6 bg-gradient-to-r bg-[#4f77ff] rounded-lg px-10 py-2.5 text-white uppercase font-medium duration-300">
+            <button className="mb-6 bg-[#4f77ff] rounded-lg px-10 py-2.5 text-white uppercase font-medium duration-300">
               Buy Ticket
             </button>
             <h3 className="mb-4 font-semibold text-xl pb-2 border-b border-gray-300 mt-10">

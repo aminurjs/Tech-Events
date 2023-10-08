@@ -8,6 +8,7 @@ import PrivateRoutes from "../Private/PrivateRoutes";
 import AllServices from "../../Pages/AllServices/AllServices";
 import ErrorPage from "../../Pages/Error/ErrorPage";
 import Schedule from "../../Pages/Schedule/Schedule";
+import Contact from "../../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,14 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: () => fetch("../services.json"),
+      },
+      {
+        path: "/contact",
+        element: (
+          <PrivateRoutes>
+            <Contact />
+          </PrivateRoutes>
+        ),
       },
     ],
   },

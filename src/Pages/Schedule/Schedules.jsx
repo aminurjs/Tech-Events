@@ -11,7 +11,7 @@ const Schedules = ({ schedule }) => {
     navigate(`/details/${id}`);
   };
   return (
-    <div className="mb-4 pb-4 border-b border-gray-300">
+    <div className="mb-10 pb-5 border-b border-gray-300">
       <div className=" flex gap-6 flex-col md:flex-row">
         <div className="md:w-1/2">
           <h2 className="text-xl font-medium">{title}</h2>
