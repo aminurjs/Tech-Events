@@ -7,6 +7,7 @@ import Register from "../../Pages/Register/Register";
 import PrivateRoutes from "../Private/PrivateRoutes";
 import AllServices from "../../Pages/AllServices/AllServices";
 import ErrorPage from "../../Pages/Error/ErrorPage";
+import Schedule from "../../Pages/Schedule/Schedule";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <AllServices />
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("../services.json"),
+      },
+      {
+        path: "/schedule",
+        element: (
+          <PrivateRoutes>
+            <Schedule />
           </PrivateRoutes>
         ),
         loader: () => fetch("../services.json"),

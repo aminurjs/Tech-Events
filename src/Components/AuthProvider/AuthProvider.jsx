@@ -35,10 +35,10 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-  const updateUser = (name) => {
+  const updateUser = (name, image) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
-      photoURL: null,
+      photoURL: image,
     });
   };
   const googleProvider = new GoogleAuthProvider();

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { AiOutlineGoogle } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
@@ -17,7 +17,7 @@ const Register = () => {
     const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(name, email, password);
+    const image = form.get("image");
     setPassError("");
 
     if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/.test(password)) {
@@ -31,7 +31,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Registered");
-        updateUser(name);
+        updateUser(name, image);
         navigate("/");
       })
       .catch((err) => {
@@ -44,8 +44,8 @@ const Register = () => {
     googleLogin()
       .then((result) => {
         console.log(result.user);
-        toast.success("Successfully Registered");
-        // navigate("/");
+        toast.success("Successfully Logged in");
+        navigate("/");
       })
       .catch((err) => {
         console.error(err);
@@ -75,6 +75,12 @@ const Register = () => {
                 name="name"
                 placeholder="Full Name"
                 required
+              />
+              <input
+                className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
+                type="text"
+                name="image"
+                placeholder="Image URL (Optional)"
               />
               <input
                 className="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b border-stone-300 focus:border-stone-700"
@@ -112,7 +118,7 @@ const Register = () => {
                 onClick={handleGoogleLogin}
                 className="block w-full p-2 border-2 border-stone-500 font-medium rounded-lg mb-5"
               >
-                <AiOutlineGoogle className="inline text-2xl mr-2"></AiOutlineGoogle>
+                <FcGoogle className="inline text-2xl mr-2"></FcGoogle>
                 Continue with Google
               </button>
             </div>

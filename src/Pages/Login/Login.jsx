@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AiOutlineGoogle } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 import toast, { Toaster } from "react-hot-toast";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
@@ -21,7 +21,6 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Logged in");
-        // updateUser(name);
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
@@ -34,7 +33,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Logged in");
-        // navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.error(err);
@@ -99,7 +98,7 @@ const Login = () => {
               onClick={handleGoogleLogin}
               className="block w-full p-2 border-2 border-stone-500 font-medium rounded-lg mb-5"
             >
-              <AiOutlineGoogle className="inline text-2xl mr-2"></AiOutlineGoogle>
+              <FcGoogle className="inline text-2xl mr-2"></FcGoogle>
               Continue with Google
             </button>
           </div>

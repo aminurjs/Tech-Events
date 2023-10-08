@@ -2,13 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        // Sign-out successful.
+        toast.success("Log-out successful");
       })
       .catch((error) => {
         console.log(error);
@@ -18,7 +19,8 @@ const Navbar = () => {
   const menus = [
     { id: "1", name: "Home", path: "/" },
     { id: "2", name: "Services", path: "/services" },
-    { id: "3", name: "About", path: "/about" },
+    { id: "3", name: "Schedule", path: "/schedule" },
+    { id: "4", name: "Contact", path: "/contact" },
   ];
   return (
     <div className="absolute w-full top-0 z-10">
@@ -119,6 +121,22 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <Toaster
+        toastOptions={{
+          success: {
+            style: {
+              background: "green",
+              color: "white",
+            },
+          },
+          error: {
+            style: {
+              background: "red",
+              color: "white",
+            },
+          },
+        }}
+      />
     </div>
   );
 };
