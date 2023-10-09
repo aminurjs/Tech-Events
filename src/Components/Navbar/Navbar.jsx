@@ -125,14 +125,14 @@ const Navbar = () => {
         toastOptions={{
           success: {
             style: {
-              background: "green",
-              color: "white",
+              background: "white",
+              color: "green",
             },
           },
           error: {
             style: {
-              background: "red",
-              color: "white",
+              background: "white",
+              color: "red",
             },
           },
         }}

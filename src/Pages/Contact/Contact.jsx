@@ -8,8 +8,14 @@ import { BiMap } from "react-icons/bi";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Subscribe from "../../Components/Subscribe/Subscribe";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div>
       <section className="bg-[url(https://i.ibb.co/yVtpFMF/group-people-working-out-business-plan-office.jpg)] bg-cover bg-center">
@@ -27,7 +33,10 @@ const Contact = () => {
       <section>
         <div className="max-w-7xl mx-auto p-5 my-20">
           <div className="flex justify-evenly mb-20 flex-col gap-10 md:gap-0 md:flex-row">
-            <div className="bg-[#f6f6f6] rounded-lg p-10 pt-7 text-center">
+            <div
+              data-aos="fade-up-right"
+              className="bg-[#f6f6f6] rounded-lg p-10 pt-7 text-center"
+            >
               <div className="p-5 bg-[#044BCC] text-white text-2xl rounded-md inline-block -mt-20">
                 <BiMap></BiMap>
               </div>
@@ -38,7 +47,10 @@ const Contact = () => {
                 Los Angeles City in California
               </p>
             </div>
-            <div className="bg-[#f6f6f6] rounded-lg p-10 pt-7 text-center">
+            <div
+              data-aos="fade-up"
+              className="bg-[#f6f6f6] rounded-lg p-10 pt-7 text-center"
+            >
               <div className="p-5 bg-[#044BCC] text-white text-2xl rounded-md inline-block -mt-20">
                 <FiPhoneCall></FiPhoneCall>
               </div>
@@ -49,7 +61,10 @@ const Contact = () => {
                 (021) 231 - 2826
               </p>
             </div>
-            <div className="bg-[#f6f6f6] rounded-lg p-10 pt-7 text-center">
+            <div
+              data-aos="fade-up-left"
+              className="bg-[#f6f6f6] rounded-lg p-10 pt-7 text-center"
+            >
               <div className="p-5 bg-[#044BCC] text-white text-2xl rounded-md inline-block -mt-20">
                 <FiMail></FiMail>
               </div>
@@ -62,7 +77,12 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex gap-6 items-center flex-col lg:flex-row">
-            <div className="lg:w-1/2">
+            <div
+              data-aos="flip-left"
+              data-aos-offset="300"
+              data-aos-duration="500"
+              className="lg:w-1/2"
+            >
               <h3 className="text-[#044BCC] font-medium text-lg mb-2">
                 Contact Us
               </h3>
@@ -92,7 +112,12 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="p-8 rounded-lg border border-gray-200 shadow lg:w-1/2">
+            <div
+              data-aos="flip-right"
+              data-aos-offset="400"
+              data-aos-duration="500"
+              className="p-8 rounded-lg border border-gray-200 shadow lg:w-1/2"
+            >
               <form className="space-y-4">
                 <input
                   className="px-5 py-2 outline-none border border-gray-200 rounded-md w-full"

@@ -1,12 +1,19 @@
 import { LiaHandsHelpingSolid, LiaQuoteLeftSolid } from "react-icons/lia";
 import { BsGraphUpArrow } from "react-icons/bs";
 import "./About.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div className="bg-[#00040F] py-20">
       <div className="max-w-7xl mx-auto px-5 lg:px-0">
-        <div>
+        <div data-aos="fade-up" data-aos-offset="300" data-aos-duration="500">
           <h3 className="text-[#5CE1E6] text-lg text-center mb-4">
             TechEvent Management
           </h3>
@@ -17,7 +24,12 @@ const About = () => {
             Empowering Digital Gatherings. Orchestrating Tech Excellence.
           </p>
           <div className="flex gap-12 lg:px-20 flex-col lg:flex-row">
-            <div className="bg-[url(https://i.ibb.co/s593kHd/the-audience.jpg)] bg-cover rounded-md mx-auto lg:mx-0 lg:w-5/12">
+            <div
+              data-aos="zoom-in-left"
+              data-aos-offset="300"
+              data-aos-duration="500"
+              className="bg-[url(https://i.ibb.co/s593kHd/the-audience.jpg)] bg-cover rounded-md mx-auto lg:mx-0 lg:w-5/12"
+            >
               <div className="min-h-[450px] rounded-md flex flex-col justify-between bg-black bg-opacity-50 p-5">
                 <div className="text-[#FFFFFFB2] text-5xl">
                   <BsGraphUpArrow></BsGraphUpArrow>
@@ -32,7 +44,12 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-7/12 mt-6">
+            <div
+              data-aos="zoom-in-right"
+              data-aos-offset="300"
+              data-aos-duration="500"
+              className="w-full lg:w-7/12 mt-6"
+            >
               <h3 className="text-[#5CE1E6] mb-4">About the TechEvent</h3>{" "}
               <h2 className="text-2xl md:text-3xl text-white font-semibold mb-4">
                 Learn The Advanced Strategy Of Growing The Tech Industry

@@ -1,13 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import toast, { Toaster } from "react-hot-toast";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import swal from "sweetalert";
 
 const Login = () => {
   const { login, googleLogin } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [passError, setPassError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -20,24 +21,25 @@ const Login = () => {
     login(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Successfully Logged in");
+        swal("Good job!", "Successfully Logged in!", "success");
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.error(err);
-        toast.error("Invalid Password");
+        setPassError("Invalid Password");
       });
   };
   const handleGoogleLogin = () => {
+    setPassError("");
     googleLogin()
       .then((result) => {
         console.log(result.user);
-        toast.success("Successfully Logged in");
+        swal("Good job!", "Successfully Logged in!", "success");
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.error(err);
-        toast.error(err.message);
+        setPassError(err.message);
       });
   };
   return (
@@ -48,13 +50,16 @@ const Login = () => {
           <h1 className="text-2xl text-[#2d385e] font-semibold text-center mb-2">
             Login to your account
           </h1>
-          <p className="text-center text-sm text-[#44525f] mb-10">
+          <p className="text-center text-sm text-[#44525f] mb-3">
             {"Don't"} have an account?{" "}
             <Link className="text-[#4f77ff]" to={"/register"}>
               Register!
             </Link>
           </p>
-          <form onSubmit={handleLogin}>
+          {passError && (
+            <p className="text-sm text-red-500 text-center">{passError}</p>
+          )}
+          <form className="mt-8" onSubmit={handleLogin}>
             <input
               className="px-5 py-2 outline-none border border-gray-200 rounded-md w-full mb-4"
               type="email"
@@ -103,24 +108,6 @@ const Login = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div>
-        <Toaster
-          toastOptions={{
-            success: {
-              style: {
-                background: "green",
-                color: "white",
-              },
-            },
-            error: {
-              style: {
-                background: "red",
-                color: "white",
-              },
-            },
-          }}
-        />
       </div>
     </div>
   );

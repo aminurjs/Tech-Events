@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 import "./Service.css";
 import { useNavigate } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Service = ({ service }) => {
   const navigate = useNavigate();
@@ -10,8 +13,16 @@ const Service = ({ service }) => {
     navigate(`/details/${id}`);
   };
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
-    <div className="p-5 flex flex-col border border-gray-800 rounded-lg">
+    <div
+      data-aos="zoom-in-up"
+      data-aos-offset="250"
+      className="p-5 flex flex-col border border-gray-800 rounded-lg"
+    >
       <img className="rounded-lg flex-grow" src={image} alt="" />
       <div className="my-5 pb-3 border-b border-gray-800">
         <h2 className="text-white text-xl font-medium">{name}</h2>

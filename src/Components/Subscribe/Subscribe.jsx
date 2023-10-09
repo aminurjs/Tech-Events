@@ -1,8 +1,19 @@
 import { FaPaperPlane } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Subscribe = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="max-w-7xl mx-auto px-10 py-16  rounded-lg relative">
+    <div
+      data-aos="zoom-in-up"
+      data-aos-offset="300"
+      data-aos-duration="600"
+      className="max-w-7xl mx-auto px-10 py-16  rounded-lg relative"
+    >
       <div className="bg-[#044BCC] absolute top-0 left-0 w-full h-full rounded-lg">
         <div className="bg-[url(https://i.ibb.co/Bgxcyxn/halftone1.png)] bg-cover absolute top-0 left-0 w-full h-full opacity-60"></div>
       </div>

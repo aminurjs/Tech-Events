@@ -2,8 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
-import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import swal from "sweetalert";
 
 const Register = () => {
   const { createUser, googleLogin, updateUser } = useContext(AuthContext);
@@ -22,7 +22,7 @@ const Register = () => {
 
     if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/.test(password)) {
       setPassError(
-        "Password must be 6 characters including one uppercase letter, and one special character!"
+        " Password should have at least  6 characters including one uppercase letter, and one special character!"
       );
       return;
     }
@@ -30,26 +30,27 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Successfully Registered");
         updateUser(name, image);
+        swal("Good job!", "Successfully Registered!", "success");
         navigate("/");
       })
       .catch((err) => {
         console.error(err);
-        toast.error(err.message);
+        setPassError(err.message);
       });
   };
 
   const handleGoogleLogin = () => {
+    setPassError("");
     googleLogin()
       .then((result) => {
         console.log(result.user);
-        toast.success("Successfully Logged in");
+        swal("Good job!", "Successfully Logged in!", "success");
         navigate("/");
       })
       .catch((err) => {
         console.error(err);
-        toast.error(err.message);
+        setPassError(err.message);
       });
   };
 
@@ -58,17 +59,21 @@ const Register = () => {
       <div className="bg-[#F0F2F5]">
         <div className="bg-[#00040F] h-[85px]"></div>
         <div className="max-w-xl mx-auto py-10">
-          <div className="px-10 py-16 bg-white rounded-lg">
+          <div className="px-10 py-16 bg-white rounded-lg border border-t-gray-200">
             <h1 className="text-2xl text-[#2d385e] font-semibold text-center mb-2">
               Register for free!
             </h1>
-            <p className="text-center text-sm text-[#44525f] mb-10">
+            <p className="text-center text-sm text-[#44525f] mb-3">
               Already have an account?{"  "}
               <Link className="text-[#4f77ff]" to={"/login"}>
                 Go Login!
               </Link>
             </p>
-            <form onSubmit={handleRegister}>
+
+            {passError && (
+              <p className="text-sm text-red-500 text-center">{passError}</p>
+            )}
+            <form className="mt-8" onSubmit={handleRegister}>
               <input
                 className="px-5 py-2 outline-none border border-gray-200 rounded-md w-full mb-4"
                 type="text"
@@ -104,7 +109,6 @@ const Register = () => {
                   {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                 </span>
               </div>
-              {passError && <p className="text-sm text-red-500">{passError}</p>}
               <button className="w-full mt-6 mb-10 bg-gradient-to-r bg-[#4f77ff] rounded-lg p-3 text-white uppercase font-medium duration-300">
                 Sign in with email
               </button>
@@ -122,24 +126,6 @@ const Register = () => {
                 Continue with Google
               </button>
             </div>
-          </div>
-          <div>
-            <Toaster
-              toastOptions={{
-                success: {
-                  style: {
-                    background: "green",
-                    color: "white",
-                  },
-                },
-                error: {
-                  style: {
-                    background: "red",
-                    color: "white",
-                  },
-                },
-              }}
-            />
           </div>
         </div>
       </div>

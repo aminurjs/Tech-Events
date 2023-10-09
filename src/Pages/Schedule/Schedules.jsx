@@ -2,16 +2,27 @@ import PropTypes from "prop-types";
 import { BiSolidTime } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Schedules = ({ schedule }) => {
   const navigate = useNavigate();
   const { id, time, title, speaker_name, place } = schedule;
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const handleNavigate = () => {
     navigate(`/details/${id}`);
   };
   return (
-    <div className="mb-10 pb-5 border-b border-gray-300">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      className="mb-10 pb-5 border-b border-gray-300"
+    >
       <div className=" flex gap-6 flex-col md:flex-row">
         <div className="md:w-1/2">
           <h2 className="text-xl font-medium">{title}</h2>
