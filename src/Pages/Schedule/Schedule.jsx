@@ -14,13 +14,13 @@ const Schedule = () => {
 
   return (
     <div>
-      <section
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        className="bg-[url(https://i.ibb.co/yVtpFMF/group-people-working-out-business-plan-office.jpg)] bg-cover bg-center"
-      >
+      <section className="bg-[url(https://i.ibb.co/yVtpFMF/group-people-working-out-business-plan-office.jpg)] bg-cover bg-center">
         <div className="bg-[#00040F] bg-opacity-90 pt-32 pb-16">
-          <div className="max-w-7xl mx-auto p-5">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            className="max-w-7xl mx-auto p-5"
+          >
             <h1 className="text-3xl text-center md:text-4xl lg:text-[42px] text-white font-semibold leading-normal mb-3">
               Event Schedule
             </h1>

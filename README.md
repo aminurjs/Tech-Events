@@ -1,8 +1,15 @@
-# React + Vite
+# Tech Events Expo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Live link https://techeventexpo.web.app/
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Register & Login: You can easily register with email password and Google account. And can easily login anytime.
+
+- Active user: Once a user logs in, he will be kept as an active user. Even if the user exits the website, subsequent logins will keep him active.
+
+- Animation: While scrolling this site, the data will be shown with a beautiful animation.
+
+- Protected Routes: Some routes are protected, if the user is not logged in they can't see them, then he will be asked to log in. After login will lead to that route.
+
+- User Info: When the user logs in, some of his information (image, name) will be displayed on the navigation bar. From there the user can log out.
