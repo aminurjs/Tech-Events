@@ -58,7 +58,7 @@ const Register = () => {
     <div>
       <div className="bg-[#F0F2F5]">
         <div className="bg-[#00040F] h-[85px]"></div>
-        <div className="max-w-xl mx-auto py-10">
+        <div className="max-w-xl mx-auto py-10 px-5">
           <div className="px-10 py-16 bg-white rounded-lg border border-t-gray-200">
             <h1 className="text-2xl text-[#2d385e] font-semibold text-center mb-2">
               Register for free!
